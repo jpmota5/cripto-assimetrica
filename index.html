@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografia Assimétrica - RSA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Criptografia Assimétrica</h1>
+        </header>
+
+        <main>
+            <!-- Gerar chaves -->
+            <section class="center-box">
+                <button id="generate-keys" class="btn">Gerar Chaves RSA</button>
+                <p id="key-info">Clique para gerar as chaves necessárias.</p>
+            </section>
+
+            <!-- Entrada de mensagem -->
+            <section class="input-section">
+                <textarea id="message" placeholder="Digite a mensagem para cifrar..." class="input-box"></textarea>
+            </section>
+
+            <!-- Botões de Cifrar e Decifrar -->
+            <section class="buttons-box">
+                <button id="encrypt-btn" class="btn">Cifrar</button>
+                <button id="decrypt-btn" class="btn" disabled>Decifrar</button>
+            </section>
+
+            <!-- Resultado -->
+            <section class="result-box">
+                <div class="result-item">
+                    <textarea id="encrypted-message" readonly placeholder="Resultado cifrado aparecerá aqui..." class="input-box"></textarea>
+                    <button class="copy-btn" data-target="encrypted-message" title="Copiar Resultado">
+                        📋
+                    </button>
+                </div>
+                <div class="result-item">
+                    <textarea id="decrypted-message" readonly placeholder="Resultado decifrado aparecerá aqui..." class="input-box"></textarea>
+                    <button class="copy-btn" data-target="decrypted-message" title="Copiar Resultado">
+                        📋
+                    </button>
+                </div>
+            </section>
+            
+        </main>
+
+        <footer>
+            <p>Feito com 💜 para aprender sobre criptografia assimétrica!</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.10.0/forge.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
